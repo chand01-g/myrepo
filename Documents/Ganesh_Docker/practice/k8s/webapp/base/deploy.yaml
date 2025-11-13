@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels: { app: webapp }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: webapp } }
+  template:
+    metadata:
+      labels: { app: webapp }
+    spec:
+      containers:
+        - name: webapp
+          image: docker.io/chand1950/webapp:latest
+          ports:
+            - containerPort: 5000
+
