@@ -1,0 +1,5 @@
+replicaCount: 1
+env:
+  DB_USER: "devuser"
+  DB_PASS: "devpass"
+

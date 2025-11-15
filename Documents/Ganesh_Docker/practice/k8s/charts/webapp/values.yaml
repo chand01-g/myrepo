@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: docker.io/chand1950/webapp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+env:
+  DB_USER: ""
+  DB_PASS: ""
+
